@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="refresh" content="3; url=3_login.html" />
+  <title>Welcome</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: sans-serif;
+    }
+
+    .fundo {
+      background: url('images/windows11-default-wallpaper-scaled.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 4px #000;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    #dataHora {
+      font-size: 18px;
+      color: #eee;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="fundo">
+    <h1>Welcome</h1>
+    <div id="dataHora">Carregando...</div>
+  </div>
+
+  <script>
+    const el = document.getElementById('dataHora');
+    const agora = new Date();
+
+    const data = agora.toLocaleDateString('pt-BR', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+
+    const hora = agora.toLocaleTimeString('pt-BR', {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    el.textContent = `${data} - ${hora}`;
+  </script>
+</body>
+</html>
