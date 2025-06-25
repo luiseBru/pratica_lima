@@ -1,23 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="3; url=1_booting.html" />
-    <title>Desktop</title>
-    <style>
-        body {
-           
-            height: 100vh; 
-            background-image: url('images/windows11-alt1-wallpaper.webp');
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            display: flex;
-        }
-      
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="; url=4_bsod.html">
+  <title>Desktop</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background-image: url('image-fundo.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: sans-serif;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .google-logo {
+      position: absolute;
+      bottom: 60px;
+      left: 20px;
+      width: 50px;
+      height: auto;
+      z-index: 10;
+    }
+
+    .lixeira-logo {
+        position: absolute;
+        bottom: 140px;
+        left: 20px;
+        width: 40px;
+        height: auto;
+        z-index: 10
+    }
+
+    .arquivo-logo {
+        position: absolute;
+        bottom: 180px;
+        left: 20px;
+        width: 40px;
+        height: auto;
+        z-index: 10
+    }
+
+    
+    .taskbar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background-color: rgba(30, 30, 30, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+
+    .taskbar .icons-left,
+    .taskbar .icons-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .taskbar span {
+      font-size: 18px;
+      cursor: default;
+    }
+
+    .taskbar .clock {
+      font-size: 14px;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
-    <h1>Desktop</h1>
+
+
+    <img src="image-google.png" alt="Google" class="google-logo">
+    <img src="image-lixeira.png" alt="lixeira" class="lixeira-logo">
+    <img src="image.png" alt="arquivo" class="arquivo-logo">
+
+
+  <div class="taskbar">
+    <div class="icons-left">
+      <span>🔍</span>
+      <span>🧩</span>
+      <span>🗂️</span>
+    </div>
+    <div class="icons-right">
+      <span>📶</span>
+      <span>🔇</span>
+      <span>🔋</span>
+      <span class="clock">12:00</span>
+    </div>
+  </div>
+
 </body>
 </html>
+
+
+

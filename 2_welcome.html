@@ -1,74 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="refresh" content="3; url=3_login.html" />
-  <title>Welcome</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5; url=3_login.html">
+  <title>Welcome </title>
+ 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      body {
+    background-color: white;
+    animation: 5000ms fadeIn;
+    }
+    @keyframes fadeIn {
+      from {
+          opacity: 0;
+
+      }
+      to {
+          opacity: 1;
+      }
+    }
+
+    .fadeIn {
+      animation: 5s fadeIn;
     }
 
     body, html {
+      margin: 0;
+      padding: 0;
       height: 100%;
-      width: 100%;
-      font-family: sans-serif;
-    }
-
-    .fundo {
-      background: url('images/windows11-default-wallpaper-scaled.jpg') no-repeat center center;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url('images/windows11-default-wallpaper-scaled.jpg') no-repeat center center fixed;
       background-size: cover;
-      height: 100%;
-      width: 100%;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: white;
-      text-shadow: 1px 1px 4px #000;
-      text-align: center;
+      flex-direction: column;
     }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    .hora {
+      font-size: 5em;
+      font-weight: 300;
     }
 
-    #dataHora {
-      font-size: 18px;
-      color: #eee;
-      background: rgba(0, 0, 0, 0.3);
-      padding: 6px 12px;
-      border-radius: 6px;
+    .data {
+      font-size: 2em;
+      margin-top: 10px;
     }
   </style>
 </head>
-<body>
-  <div class="fundo">
-    <h1>Welcome</h1>
-    <div id="dataHora">Carregando...</div>
-  </div>
-
-  <script>
-    const el = document.getElementById('dataHora');
-    const agora = new Date();
-
-    const data = agora.toLocaleDateString('pt-BR', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-
-    const hora = agora.toLocaleTimeString('pt-BR', {
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-
-    el.textContent = `${data} - ${hora}`;
-  </script>
+<body class="fadeIn">
+  <div class="hora">15:00</div>
+  <div class="data">11 de junho de 2025</div>
 </body>
 </html>

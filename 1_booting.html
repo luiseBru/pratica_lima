@@ -3,49 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="3; url=2_welcome.html">
-  <title>Iniciando</title>
+  <meta http-equiv="refresh" content="5; url=2_welcome.html">
+  <title>Boot Screen</title>
   <style>
+
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
-      text-align: center;
-      margin: 100px auto;
+    background-color: white;
+    animation: 5s fadeIn;
+    }
+    @keyframes fadeIn {
+      from {
+          opacity: 0;
+
+      }
+      to {
+          opacity: 1;
+      }
     }
 
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
+    .fadeIn {
+      animation: 5s fadeIn;
     }
 
-    img {
-      width: 200px;
-      height: 200px;
-      opacity: 0.9;
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: black;
+      font-family: Arial, sans-serif;
     }
 
-    .loader {
-      border: 4px solid #ffffff33;
-      border-top: 4px solid #fff;
+    img.logo {
+      width: 180px;
+      margin-bottom: 40px;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid white;
+      border-top: 4px solid transparent;
       border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      animation: spin 1s linear infinite;
-      margin: 20px auto 0;
+      animation: girar 1s linear infinite;
+      margin-top: 30px;
     }
 
-    @keyframes spin {
+    @keyframes girar {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    .texto {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
   </style>
 </head>
-<body>
-  <img src="images/windows-11.png" alt="Logo do Windows">
-  <h1>Iniciando...</h1>
-  <div class="loader"></div>
+<body class="fadeIn">
+  <img class="logo" src="images/windows-11.png" alt="Logo Windows" />
+
+  <div class="spinner"></div>
+
+  <div class="texto">Iniciando</div>
 </body>
 </html>
-
-
+ 
+ 
